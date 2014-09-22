@@ -4,7 +4,8 @@ class ContainerHolder; include BikeContainer; end
 
 describe BikeContainer do
 
-	let(:bike) { Bike.new }
+	let(:bike) { double :bike}
+	let(:broken_bike) { double :broken_bike, broken?: true}
 	let(:holder) { ContainerHolder.new }
 
 	def fill_holder(holder)
